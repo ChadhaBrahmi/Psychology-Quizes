@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="اختبار تفاعلي لمراجعة أهم أسئلة مرحلة المراهقة في علم نفس النمو.">
+
+    <title>اختبار مرحلة المراهقة | علم نفس النمو</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+       
+        <header class="topbar">
+
+            <div class="brand-mark" aria-hidden="true"></div>
+
+            <div>
+                <p class="eyebrow">علم نفس النمو</p>
+                <h1>مراجعة مرحلة المراهقة</h1>
+            </div>
+
+            <span class="chapter-tag">الصفحات 191–227</span>
+
+        </header>
+
+
+       
+        <section id="home-screen" class="screen" aria-labelledby="home-title">
+
+            <div class="intro">
+
+                <span class="intro-kicker">
+                    مراجعة مركّزة قبل الاختبار
+                </span>
+
+                <h2 id="home-title">
+                    أهم أسئلة <span>مرحلة المراهقة</span>
+                </h2>
+
+                <p>
+                    اختبار واحد يضم 5 سؤال اختيار من متعدد حول أهم
+                    التعريفات والأفكار والخصائص والعوامل والمفاهيم
+                    الواردة في الفصل.
+                </p>
+
+                <div class="stats">
+
+                    <div>
+                        <strong>5</strong>
+                        <small>سؤالًا مهمًا</small>
+                    </div>
+
+                    <div>
+                        <strong>4</strong>
+                        <small>اختيارات لكل سؤال</small>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <small>إعادة المحاولة</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+          
+            <div class="single-test">
+
+                <div>
+
+                    <span class="test-number">01</span>
+
+                    <div class="test-info">
+                        <strong>الاختبار الشامل</strong>
+
+                        <small>
+                            مفهوم المراهقة · خصائصها · النمو · العوامل · الجنوح
+                        </small>
+                    </div>
+
+                </div>
+
+                <button id="start-button" class="primary-button" type="button">
+                    ابدأ الاختبار <span aria-hidden="true">←</span>
+                </button>
+
+            </div>
+
+
+            <p class="source-note">
+                الأسئلة مستندة إلى كتاب
+                «علم نفس النمو: من الطفولة إلى المراهقة»،
+                الصفحات 191–227.
+            </p>
+
+        </section>
+
+
+        
+        <section id="quiz-screen" class="screen hidden" aria-labelledby="quiz-title">
+
+            <button id="home-button" class="back-button" type="button">
+                ← العودة
+            </button>
+
+            <div class="quiz-heading">
+
+                <div>
+                    <p class="eyebrow">الاختبار الشامل</p>
+                    <h2 id="quiz-title">أهم أسئلة مرحلة المراهقة</h2>
+                </div>
+
+                <div class="question-counter" aria-label="رقم السؤال">
+
+                    <strong id="current-number">1</strong>
+                    <span> / </span>
+                    <span id="total-number">20</span>
+
+                </div>
+
+            </div>
+
+
+           
+            <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="تقدم الاختبار"
+                aria-valuemin="0"
+                aria-valuemax="20"
+                aria-valuenow="0"
+            >
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+
+
+           
+            <article class="question-card">
+
+                <p class="question-label">السؤال</p>
+
+                <h3 id="question-text"></h3>
+
+                <div id="answers" class="answers"></div>
+
+                <p
+                    id="feedback"
+                    class="feedback hidden"
+                    aria-live="polite"
+                ></p>
+
+                <button
+                    id="next-button"
+                    class="primary-button hidden"
+                    type="button"
+                >
+                    السؤال التالي
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <section id="result-screen" class="screen hidden" aria-labelledby="result-title">
+
+            <div class="result-card">
+
+                <div class="result-icon" aria-hidden="true">✦</div>
+
+                <p class="eyebrow">انتهى الاختبار</p>
+
+                <h2 id="result-title">أحسنت!</h2>
+
+                <div class="score-circle">
+
+                    <strong id="score-value">0</strong>
+                    <span id="score-total">/ 20</span>
+
+                </div>
+
+                <p id="result-message"></p>
+
+                <div class="result-actions">
+
+                    <button
+                        id="restart-button"
+                        class="primary-button"
+                        type="button"
+                    >
+                        إعادة الاختبار
+                    </button>
+
+                    <button
+                        id="result-home-button"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        العودة للرئيسية
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+        <footer>
+           Made By Brahmi Chadha
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
